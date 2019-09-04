@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 
 public class GetDateTime {
 	
-	public static DateFormat main(String[] args) {
+	public static DateFormat getDateFormat() {
 		Date date = new Date();
 		
 //		DateFormat hourFormat = new SimpleDateFormat("HH:mm:ss");
@@ -15,9 +15,10 @@ public class GetDateTime {
 //		DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
 //		System.out.println("Fecha: "+dateFormat.format(date));
 		
- 		DateFormat hourdateFormat = new SimpleDateFormat("HH:mm:ss yyyyMMdd");
- 		System.out.println("Hora y fecha: "+hourdateFormat.format(date));
+ 		DateFormat datehourFormat = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
+ 		
+ 		System.out.println("getDateFormat --> Fecha y hora: "+ datehourFormat.format(date));
 		
-		return hourdateFormat;
+ 		return datehourFormat;
 	}
 }

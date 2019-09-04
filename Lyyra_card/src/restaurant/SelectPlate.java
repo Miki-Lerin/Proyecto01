@@ -1,7 +1,9 @@
 package restaurant;
 
+import java.util.Date;
 import java.util.Scanner;
 import plate.*;
+import java.text.DateFormat;
 
 public class SelectPlate {
 
@@ -9,7 +11,8 @@ public class SelectPlate {
 	// _________________________________________________
 	   public static void showMenu(Scanner reader, PlateDB db2, MovimentDB dbmov) {
 		   
-		    int ii = 0;	
+		    int ii = 0;
+		    double price = 0;
 		   
 		    System.out.println("*********************************************");
 		    System.out.println(" P L A T O S  D E L  D I A                   ");
@@ -24,17 +27,35 @@ public class SelectPlate {
 		    }		   
 		    System.out.println("\n" + (ii + 1) + ".- Pagar");  
 		    
-		    inputplate(reader, db2, dbmov);
-   
+			Date date = new Date();
+	        DateFormat strdate = GetDateTime.getDateFormat();
+		    
+		    while (true) {
+			    int option = inputplate(reader, db2, dbmov, (ii + 1));
+			    if (option == (ii + 1)) {
+		        	System.out.println("Toca pagar " + "date: " + strdate.format(date));
+		        	break;
+			    } else {
+			    	price = price + db2.getPlate(option - 1).getPrice();
+			    }
+		    }
+
+		    System.out.println("Precio total es: " + price);
 	   }
 	   
-	   public static void inputplate(Scanner reader, PlateDB db, MovimentDB dbMov) {
-	        System.out.println("Seleccione plato");
-	        int option = Integer.parseInt(reader.nextLine());
+		// showMenu
+		// _________________________________________________	   
+	       public static Integer inputplate(Scanner reader, PlateDB db, MovimentDB dbMov, Integer pagar) {
+	    	   
+	           System.out.println("Seleccione plato");
+	           int option = Integer.parseInt(reader.nextLine());
+
+	           if (option == pagar) {
+	        	   System.out.println("Toca pagar ");
+	           } else {
+		           System.out.println(db.getPlate(option));	        	
+	           }
 	        
-	        System.out.println(db.getPlate(option));
-	        
-	   }
-	   
-	   
+	           return option;
+	       }
 }
