@@ -20,7 +20,7 @@ public class InitialMenuRestaurant {
 		             case 1:
 		            	 double beginningBalance = OpenBox.openBox(reader);
 		         		 System.out.println("Caja abierta con " + beginningBalance + " €");
-		         		 WriteMoviment.writeMoviment(1, "E", "Apertura caja", beginningBalance);
+		         		 WriteMoviment.writeMoviment(1, "A", "Apertura caja", beginningBalance, 0.0, dbmov);
 		               break;
 		             case 2:
 		            	 SelectPlate.showMenu(reader, dbplate, dbmov);

@@ -43,7 +43,7 @@ public class SelectPlate {
 		    System.out.println("Precio total es: " + price);
 	   }
 	   
-		// showMenu
+		// input plate
 		// _________________________________________________	   
 	       public static Integer inputplate(Scanner reader, PlateDB db, MovimentDB dbMov, Integer pagar) {
 	    	   

@@ -4,13 +4,13 @@ import java.text.DateFormat;
 
 public class Moviment {
 	
-	private DateFormat date;
+	private String date;
 	private int nummov;
 	private String tipmov;
 	private String concep;
 	private Double price;
 	
-	public Moviment(DateFormat date, int nummov, String tipmov, String concep, Double price) {
+	public Moviment(String date, int nummov, String tipmov, String concep, Double price) {
 		this.date = date;
 		this.nummov = nummov;
 		this.tipmov = tipmov;
@@ -18,11 +18,11 @@ public class Moviment {
 		this.price = price;
 	}
 
-	public DateFormat getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(DateFormat date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
