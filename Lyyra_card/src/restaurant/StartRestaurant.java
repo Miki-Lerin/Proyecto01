@@ -6,7 +6,7 @@ import plate.PlateDB;
 
 public class StartRestaurant {
 
-	// startPlate
+	// start Plate.
 	// _________________________________________________
 	   public static MovimentDB startMoviment(Scanner reader, PlateDB dbPlate, MovimentDB dbMov) {
 		   
