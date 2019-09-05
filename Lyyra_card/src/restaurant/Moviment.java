@@ -1,23 +1,21 @@
 package restaurant;
 
-import java.text.DateFormat;
-
 public class Moviment {
 	
 	private String date;
 	private int nummov;
 	private String tipmov;
 	private String concep;
-	private Double price;
+	private Double dineroCaja;
 	
-	public Moviment(String date, int nummov, String tipmov, String concep, Double price) {
+	public Moviment(String date, int nummov, String tipmov, String concep, Double dineroCaja) {
 		this.date = date;
 		this.nummov = nummov;
 		this.tipmov = tipmov;
 		this.concep = concep;
-		this.price = price;
+		this.dineroCaja = dineroCaja;
 	}
-
+	
 	public String getDate() {
 		return date;
 	}
@@ -50,17 +48,17 @@ public class Moviment {
 		this.concep = concep;
 	}
 
-	public Double getPrice() {
-		return price;
+	public Double getDineroCaja() {
+		return dineroCaja;
 	}
 
-	public void setPrice(Double price) {
-		this.price = price;
+	public void setDineroCaja(Double dineroCaja) {
+		this.dineroCaja = dineroCaja;
 	}
 
 	@Override
 	public String toString() {
 		return "Moviment [date=" + this.date + ", nummov=" + this.nummov + ", tipmov=" + this.tipmov + ", concep=" + this.concep
-				+ ", price=" + this.price + "]";
+				+ ", price=" + this.dineroCaja + "]";
 	}
 }

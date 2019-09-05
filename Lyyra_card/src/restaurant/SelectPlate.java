@@ -9,7 +9,7 @@ public class SelectPlate {
 
 	// showMenu
 	// _________________________________________________
-	   public static void showMenu(Scanner reader, PlateDB db2, MovimentDB dbmov) {
+	   public static double showMenu(Scanner reader, PlateDB db2, MovimentDB dbmov) {
 		   
 		    int ii = 0;
 		    double price = 0;
@@ -24,7 +24,8 @@ public class SelectPlate {
 			   } else {
 					System.out.println(ii + ".- " + db2.getPlate(i).getPlate() + "\t\t" + db2.getPlate(i).getPrice());				   
 			   }
-		    }		   
+		    }
+ 		    
 		    System.out.println("\n" + (ii + 1) + ".- Pagar");  
 		    
 			Date date = new Date();
@@ -41,6 +42,7 @@ public class SelectPlate {
 		    }
 
 		    System.out.println("Precio total es: " + price);
+		    return price;
 	   }
 	   
 		// input plate
