@@ -12,6 +12,7 @@ public class SelectPlate {
 	   public static double showMenu(Scanner reader, PlateDB db2, MovimentDB dbmov) {
 		   
 		    int ii = 0;
+		    int optionend = 0;
 		    double price = 0;
 		   
 		    System.out.println("*********************************************");
@@ -26,14 +27,15 @@ public class SelectPlate {
 			   }
 		    }
  		    
-		    System.out.println("\n" + (ii + 1) + ".- Pagar");  
+ 		    optionend = ii + 1;
+		    System.out.println("\n" + optionend + ".- Pagar");  
 		    
 			Date date = new Date();
 	        DateFormat strdate = GetDateTime.getDateFormat();
 		    
 		    while (true) {
-			    int option = inputplate(reader, db2, dbmov, (ii + 1));
-			    if (option == (ii + 1)) {
+			    int option = inputplate(reader, db2, dbmov, optionend);
+			    if (option == optionend) {
 		        	System.out.println("Toca pagar " + "date: " + strdate.format(date));
 		        	break;
 			    } else {
@@ -55,7 +57,7 @@ public class SelectPlate {
 	           if (option == pagar) {
 	        	   System.out.println("Toca pagar ");
 	           } else {
-		           System.out.println(db.getPlate(option));	        	
+		           System.out.println(db.getPlate(option - 1));	        	
 	           }
 	        
 	           return option;

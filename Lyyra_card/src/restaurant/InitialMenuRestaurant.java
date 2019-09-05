@@ -11,6 +11,7 @@ public class InitialMenuRestaurant {
 		// _______________________________
 		   public static void initialMenuRestaurant(Scanner reader, PlateDB dbplate, MovimentDB dbmov) {
 			   boolean salir = false;
+			   double price = 0;
 			   double saldoCaja = 0;
 			   
 			   while(!salir){
@@ -25,11 +26,11 @@ public class InitialMenuRestaurant {
 		         		 saldoCaja += beginningBalance;
 		               break;
 		             case 2:
-		            	 double price = SelectPlate.showMenu(reader, dbplate, dbmov);
+		            	 price = SelectPlate.showMenu(reader, dbplate, dbmov);
 		            	 WriteMoviment.writeMoviment(2, "C", "Cobro platos", price, 0.0, dbmov);
-		            	 saldoCaja += price;
 		               break;
 		             case 3:
+		            	 saldoCaja += price;
 		               break;
 		             case 4:
 		             	System.out.println("Saldo actual caja: " + saldoCaja);
