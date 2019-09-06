@@ -30,10 +30,11 @@ public class InitialMenuRestaurant {
 		            	 WriteMoviment.writeMoviment(2, "C", "Cobro platos", price, 0.0, dbmov);
 		               break;
 		             case 3:
-		            	 saldoCaja += price;
+		            	 saldoCaja = CobroCaja.cobroCaja(reader, saldoCaja, price, dbmov);
 		               break;
 		             case 4:
-		             	System.out.println("Saldo actual caja: " + saldoCaja);
+		            	ListMoviment.listMoviment(dbmov);
+		             	System.out.println("\n Saldo actual caja: " + saldoCaja);
 		             	break;
 		             case 99:
 		               salir=true;
