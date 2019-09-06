@@ -12,7 +12,7 @@ public class CobroCaja {
 		
 		if (paga != price) {
 		    System.out.println("no son iguales");
-       	    WriteMoviment.writeMoviment(2, "R", "Cambio", (paga - price), 0.0, dbmov);
+       	    WriteMoviment.writeMoviment("R", "Cambio", (paga - price), 0.0, dbmov);
        	    saldoCaja -= (paga - price);
 		}    
 		

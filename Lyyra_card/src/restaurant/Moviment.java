@@ -3,14 +3,12 @@ package restaurant;
 public class Moviment {
 	
 	private String date;
-	private int nummov;
 	private String tipmov;
 	private String concep;
 	private Double dineroCaja;
 	
-	public Moviment(String date, int nummov, String tipmov, String concep, Double dineroCaja) {
+	public Moviment(String date, String tipmov, String concep, Double dineroCaja) {
 		this.date = date;
-		this.nummov = nummov;
 		this.tipmov = tipmov;
 		this.concep = concep;
 		this.dineroCaja = dineroCaja;
@@ -22,14 +20,6 @@ public class Moviment {
 
 	public void setDate(String date) {
 		this.date = date;
-	}
-
-	public int getNummov() {
-		return nummov;
-	}
-
-	public void setNummov(int nummov) {
-		this.nummov = nummov;
 	}
 
 	public String getTipmov() {
@@ -58,7 +48,7 @@ public class Moviment {
 
 	@Override
 	public String toString() {
-		return "Moviment [date=" + this.date + ", nummov=" + this.nummov + ", tipmov=" + this.tipmov + ", concep=" + this.concep
-				+ ", price=" + this.dineroCaja + "]";
+		return "Moviment [date=" + date + ", tipmov=" + tipmov + ", concep=" + concep + ", dineroCaja=" + dineroCaja
+				+ "]";
 	}
 }
