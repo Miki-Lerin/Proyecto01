@@ -22,4 +22,28 @@ public class Persona {
 	   fechaNacimiento.imprimir();
 	   System.out.println();
 	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public Fecha getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+	
+	public void setFechaNacimiento(Fecha fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	
+	public int getDni() {
+		return dni;
+	}
+	
+	public void setDni(int dni) {
+		this.dni = dni;
+	}
 }
