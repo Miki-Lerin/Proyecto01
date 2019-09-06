@@ -21,7 +21,7 @@ public class Moviment {
 	public void setDate(String date) {
 		this.date = date;
 	}
-
+	
 	public String getTipmov() {
 		return tipmov;
 	}

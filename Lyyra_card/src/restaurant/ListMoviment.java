@@ -6,9 +6,9 @@ public class ListMoviment {
 
 		System.out.println("------MOVIMIENTOS DEL DIA--------------------------");
 		
-	    for(Moviment dbMoviment : db.getArray()) {
-		      System.out.println(dbMoviment.getDate() + " " + " " + dbMoviment.getTipmov() + " " + dbMoviment.getConcep() + " " + dbMoviment.getDineroCaja());
-        }
+	    for (int i=0; i< db.arraySize(); i++) {
+		      System.out.println(db.getPlate(i).getDate() + " " + i + " " + db.getPlate(i).getTipmov() + " " + db.getPlate(i).getConcep() + " " + db.getPlate(i).getDineroCaja());
+	    }
 
 	    System.out.println("---------------------------------------------------");
 	}

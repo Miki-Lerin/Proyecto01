@@ -15,7 +15,7 @@ public class WriteMoviment {
  		
 		db.addMoviment(M1);
 		
-		System.out.println("WriteMoviment --> " + M1.getDate() + " Importe a cobrar: " + M1.getDineroCaja());
+		System.out.println("WriteMoviment --> " + M1.getDate() + " Importe: " + M1.getDineroCaja());
 	}
 
 }
