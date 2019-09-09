@@ -21,12 +21,23 @@ public class InitialMenuRestaurant {
 		             case 1:
 		            	 double beginningBalance = OpenBox.openBox(reader);
 		         		 System.out.println("Caja abierta con " + beginningBalance + " €");
+<<<<<<< HEAD
 		         		 WriteMoviment.writeMoviment(1, "A", "Apertura caja", beginningBalance,  0.0, dbmov);
 		                 break;
+=======
+		         		 WriteMoviment.writeMoviment("A", "Apertura caja", beginningBalance,  0.0, dbmov);
+		         		 saldoCaja += beginningBalance;
+		               break;
+>>>>>>> branch 'master' of https://github.com/Miki-Lerin/Proyecto01.git
 		             case 2:
 		            	 price = SelectPlate.showMenu(reader, dbplate, dbmov);
+<<<<<<< HEAD
 		            	 WriteMoviment.writeMoviment(2, "C", "Cobro platos", price, 0.0, dbmov);
 		                 break;
+=======
+		            	 WriteMoviment.writeMoviment("C", "Cobro platos", price, 0.0, dbmov);
+		               break;
+>>>>>>> branch 'master' of https://github.com/Miki-Lerin/Proyecto01.git
 		             case 3:
 		            	 CobroCaja.cobroCaja(reader, price, dbmov);
 		                 break;
