@@ -59,7 +59,7 @@ public class Card {
 
 	@Override
 	public String toString() {
-		return "Card [numcard=" + this.numcard + ", owner=" + this.owner + ", balance=" + this.balance + "]";
+		return "Card-toString [numcard=" + this.numcard + ", owner=" + this.owner + ", balance=" + this.balance + "]";
 	}
 
 

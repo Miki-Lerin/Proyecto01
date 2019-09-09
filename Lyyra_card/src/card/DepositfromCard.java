@@ -6,7 +6,7 @@ public class DepositfromCard {
 	
 	
 	// _______________________________
-	// Deposit from Card
+	// Deposit from Card 
 	// _______________________________	   
 	   public static void depositfromCard(Scanner reader, CardDB db) {
 		   
@@ -32,13 +32,13 @@ public class DepositfromCard {
 				 			  Card mycard = db.getCard(i);
 				 			  mycard.loadMoney(askbalance);
 				 			  db.getCard(i).setBalance(mycard.getBalance());
+				 			  mycard.toString();
 				 			  break;
 				 		  }
 					   }	
 			   }
 		   }
 
-		   System.out.println("Ingreso --> La matriz contiene --> " + db.getArray());
-
+		   System.out.println("\n Ingreso --> La matriz contiene --> " + db.getArray());
 	   }	
 }
