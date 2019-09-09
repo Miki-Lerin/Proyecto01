@@ -12,12 +12,7 @@ public class CobroCaja {
 		
 		if (paga != price) {
 		    System.out.println("no son iguales");
-<<<<<<< HEAD
-       	    WriteMoviment.writeMoviment(2, "R", "Cambio", (paga - price), 0.0, dbmov);
-=======
        	    WriteMoviment.writeMoviment("R", "Cambio", (paga - price), 0.0, dbmov);
-       	    saldoCaja -= (paga - price);
->>>>>>> branch 'master' of https://github.com/Miki-Lerin/Proyecto01.git
 		}    
 	}
 }
