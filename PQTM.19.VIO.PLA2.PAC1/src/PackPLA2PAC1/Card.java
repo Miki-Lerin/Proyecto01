@@ -13,6 +13,7 @@ public class Card {
 	}
 	
 	public void imprimirCard() {
+		System.out.println("");
 		System.out.println("Card-NUMCARD: " + numCard);
 		System.out.println("Card-CVV: " + cvv);
 		System.out.println("Card-FECHA EXPIRACION: " 
