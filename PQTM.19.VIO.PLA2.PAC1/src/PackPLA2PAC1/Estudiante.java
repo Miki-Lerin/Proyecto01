@@ -12,6 +12,7 @@ public class Estudiante extends Persona {
 	private int numeroCalificaciones;
 //	private ArrayList<Card> cardList = new ArrayList<>();
 	private List<Card> cardList = new ArrayList<>();
+	private List<Mascota> mascotaList = new ArrayList<>();
 	
 	
 	public Estudiante(int numeroEstudiante, String nombre, Fecha fechaNacimiento, 
@@ -40,6 +41,10 @@ public class Estudiante extends Persona {
 	
 	public void imprimirTarjetas() {
 		cardList.forEach(name -> System.out.println("Estudiante-TARJETA Nº.: " + name.getNumCard()));
+	}
+	
+	public void imprimirMascotas() {
+		
 	}
 	
 	public void mayorEdad() {
