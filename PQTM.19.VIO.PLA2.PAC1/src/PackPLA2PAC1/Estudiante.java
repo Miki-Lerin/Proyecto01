@@ -11,7 +11,7 @@ public class Estudiante extends Persona {
 	private int puntuacionTotal;
 	private int numeroCalificaciones;
 //	private ArrayList<Card> cardList = new ArrayList<>();
-	private List<Card> cardList = new ArrayList<>();
+	private List<Credit> creditList = new ArrayList<>();
 	private List<Mascota> mascotaList = new ArrayList<>();
 	
 	
@@ -23,7 +23,6 @@ public class Estudiante extends Persona {
 	    this.numeroEstudiante = numeroEstudiante;
 	    this.puntuacionTotal = 0;
 	    this.numeroCalificaciones = 0;
-	    
 	}
 	
 	
@@ -40,11 +39,11 @@ public class Estudiante extends Persona {
 	}
 	
 	public void imprimirTarjetas() {
-		cardList.forEach(name -> System.out.println("Estudiante-TARJETA Nº.: " + name.getNumCard()));
+		creditList.forEach(name -> System.out.println("Estudiante-TARJETA Nº.: " + name.getNumCard() + " con un limite de: " + name.getCreditLimit()));
 	}
-	
-	public void imprimirMascotas() {
 		
+	public void imprimirMascotas() {
+		mascotaList.forEach(mascotas -> System.out.println("Estudiante-MASCOTA: " + mascotas.getRaza()));
 	}
 	
 	public void mayorEdad() {
@@ -80,12 +79,21 @@ public class Estudiante extends Persona {
 	}
 
 
-	public List<Card> getCardList() {
-		return cardList;
+	public List<Credit> getCreditList() {
+		return creditList;
 	}
 
-	public void setCardList(List<Card> cardList) {
-		this.cardList = cardList;
+	public void setCreditList(List<Credit> creditList) {
+		this.creditList = creditList;
 	}
 
+
+	public List<Mascota> getMascotaList() {
+		return mascotaList;
+	}
+
+
+	public void setMascotaList(List<Mascota> mascotaList) {
+		this.mascotaList = mascotaList;
+	}
 }

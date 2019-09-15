@@ -16,18 +16,32 @@ public class Test {
 		
 		System.out.println("");
 		System.out.println("*********************************************************************");
-		System.out.println("*                        << CARD >>                                 *");
+		System.out.println("*                        << CARD CREDIT>>                           *");
 		System.out.println("*                                                                   *");
 		System.out.println("*********************************************************************");
 
-		Card C1 = new Card("4766642583551762", "0987" , new Fecha(31, 01, 2023));
-		C1.imprimirCard();
+		Credit CR1 = new Credit("4766642583551762", "0987" , new Fecha(31, 01, 2023), "ES3334455555");
+		CR1.imprimirCard();
+		CR1.printCurrentLimit();
 		
-		Card C2 = new Card("4733342583552222", "1112" , new Fecha(11, 03, 2020));
-		C2.imprimirCard();
+		Credit CR2 = new Credit("4733342583552222", "1112" , new Fecha(11, 03, 2020), "ES5984848484", 2000);
+		CR2.imprimirCard();
+		CR2.printCurrentLimit();
 		
-		Card C3 = new Card("4788842583553333", "0455", new Fecha(07, 06, 2019));
-		C3.imprimirCard();
+		Credit CR3 = new Credit("4788842583553333", "0455", new Fecha(07, 06, 2019), "ES99048484444");
+		CR3.imprimirCard();
+		
+		CR3.printCurrentLimit();
+		
+		System.out.println("");
+		System.out.println("*********************************************************************");
+		System.out.println("*                        << MASCOTA >>                              *");
+		System.out.println("*                                                                   *");
+		System.out.println("*********************************************************************");
+
+		
+		
+		
 		
 		System.out.println("");
 		System.out.println("*********************************************************************");
@@ -39,18 +53,22 @@ public class Test {
 		E1.imprimirDatos();
 		E1.mayorEdad();
 		
-		E1.getCardList().add(C3);
+		E1.getCreditList().add(CR3);
 		E1.imprimirTarjetas();
 		
 		Estudiante E2 = new Estudiante(23991, "Joan Tortell", new Fecha(8, 9, 2012), new Hora(12, 32), "4398735T", 2.08);
 		E2.imprimirDatos();
 		E2.mayorEdad();   
 	
-		E2.getCardList().add(C1);
-		E2.getCardList().add(C2);
+		E2.getCreditList().add(CR1);
+		E2.getCreditList().add(CR2);
 		E2.imprimirTarjetas();
 		
 		E2.soyMasAltoQue(E1);
+		
+		CR1.increaseCreditLimit(1000);
+		E2.getCreditList().get(0).getCreditLimit();
+		E2.imprimirTarjetas();
 	}
 
 }

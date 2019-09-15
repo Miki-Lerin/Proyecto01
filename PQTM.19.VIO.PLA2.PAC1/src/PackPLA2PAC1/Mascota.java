@@ -1,5 +1,8 @@
 package PackPLA2PAC1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Mascota {
 	
 	private String name;
@@ -9,6 +12,25 @@ public class Mascota {
 	private String color;
 	private double peso;
 	private Fecha fechaNacio;
+	private List<Vacuna> vacunaList = new ArrayList<>();
+	
+	/* variables estaticas */
+	private static final int edadGato = 1;
+	private static final int edadPerroPequeño = 9;
+	private static final int edadPerroMediano = 1;
+	private static final int edadPerroGrande = 2;
+	private static final double edadPerroGigante = 2.5;
+	
+	/*
+	 * un gato es adulto cuando tiene un año
+	 * 
+	 * un perro
+	 * En razas pequeñas se considera adulto a un perro entre los 9 meses y el año.
+	   En razas medianas suele ser entre el año y el año y medio.
+	   En razas grandes tendrás que esperar hasta los 2 años.
+	   En razas gigantes este período se extiende entre los 2 años y medio y los 3 años.
+	 */
+	
 	
 	public Mascota(String name, String especie, String raza, String tipoPelo, 
 			String color, double peso, Fecha fechaNacio) {
@@ -27,7 +49,11 @@ public class Mascota {
 		   System.out.println("Mascota-RAZA: " + raza);
 		   System.out.print("Mascota-FECHA DE NACIMIENTO: ");
 		   fechaNacio.imprimir();
-		}
+	}
+	
+	public void imprimirVacunas() {
+		vacunaList.forEach(vacuna -> System.out.println("Mascota-VACUNA: " + vacuna.getLoteVacuna()));
+	}
 
 	public String getName() {
 		return name;
