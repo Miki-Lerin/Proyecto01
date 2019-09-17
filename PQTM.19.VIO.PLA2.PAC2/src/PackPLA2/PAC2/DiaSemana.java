@@ -6,7 +6,7 @@ import java.util.TimeZone;
 
 public class DiaSemana {
 	
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		 
 		// Creamos una instancia del calendario
 		Calendar now = Calendar.getInstance();
@@ -30,43 +30,39 @@ public class DiaSemana {
 		// El dia de la semana inicia en el 1 mientras que el array empieza en el 0
 		System.out.println("Hoy es : " + strDays[now.get(Calendar.DAY_OF_WEEK) - 1]);
 		
-		letraDia(24, 9, 2019);
+		diaDeLaSemana(24, 9, 2019);
 		
 		
 	}
 	
-	public static void letraDia (int dia, int mes, int anyo) {
+	*/
+	
+	public static String diaDeLaSemana (int dia, int mes, int anyo) {
 		
-		String letraD="";
-        /*Calendar c = Calendar.getInstance();
-        c.set(ano, mes, dia, 0, 0, 0);
-        nD=c.get(Calendar.DAY_OF_WEEK);*/
+		String diaSemana ="";
+ 
         TimeZone timezone = TimeZone.getDefault();
         Calendar calendar = new GregorianCalendar(timezone);
         calendar.set(anyo, mes-1, dia);
-        int nD=calendar.get(Calendar.DAY_OF_WEEK);
-  //      Log.i("result","diaSemana: "+nD+" dia:"+dia+" mes:"+mes+ "año:" + anyo);
-        switch (nD){
-            case 1: letraD = "Domingo";
+        int numDia = calendar.get(Calendar.DAY_OF_WEEK);
+ 
+        switch (numDia){
+            case 1: diaSemana = "Domingo";
                 break;
-            case 2: letraD = "Lunes";
+            case 2: diaSemana = "Lunes";
                 break;
-            case 3: letraD = "Martes";
+            case 3: diaSemana = "Martes";
                 break;
-            case 4: letraD = "Miercoles";
+            case 4: diaSemana = "Miercoles";
                 break;
-            case 5: letraD = "Jueves";
+            case 5: diaSemana = "Jueves";
                 break;
-            case 6: letraD = "Viernes";
+            case 6: diaSemana = "Viernes";
                 break;
-            case 7: letraD = "Sabado";
+            case 7: diaSemana = "Sabado";
                 break;
         }
-		
-		System.out.println("Letra del dia semana: " + letraD);
-		
+        
+        return diaSemana;
 	}
-	
-	
-	
 }

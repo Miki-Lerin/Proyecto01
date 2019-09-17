@@ -13,6 +13,6 @@ public class Main {
 		Menu menu = new Menu(reader);
 		menu.loop(reader);
 		
-		System.out.println("See you in the sky!");
+		System.out.println("End of the date test!");
 	}
 }

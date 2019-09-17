@@ -16,8 +16,23 @@ public class Validaciones {
         } catch (ParseException e) {
             return false;
         }
+   
         return true;
     }
+	
+	public static boolean fechaMayorFechaInicial(Date fechaHasta) {
+		SimpleDateFormat df = new SimpleDateFormat("ddMMyyyy");
+		try {
+			Date fechaDesde = df.parse("01011978");
+			int resultComparacion = fechaDesde.compareTo(fechaHasta);
+			if (resultComparacion > 0) {
+				return false;
+			}
+		} catch (ParseException e) {
+			return false;
+		}
+		return true;
+	}
 	
 	public static int numeroDiasEntreDosFechas(Date fecha1, Date fecha2) {
 	     long startTime = fecha1.getTime();
