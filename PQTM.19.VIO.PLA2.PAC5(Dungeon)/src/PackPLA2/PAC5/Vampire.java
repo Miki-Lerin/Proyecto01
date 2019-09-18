@@ -84,8 +84,4 @@ public class Vampire {
     public String coordinates() {
         return this.x + "x" + this.y + "y";
     }
-	
-	
-	
-
 }
